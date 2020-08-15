@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Reactants`,
     author: {
-      name: `Félix Oporto López`,
+      name: `Félix Oporto`,
       summary: `I write turorials to help begginer programmers learn the necessary skills to become frontend developers.`,
     },
     description: ``,

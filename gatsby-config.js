@@ -3,7 +3,7 @@ module.exports = {
     title: `Reactants`,
     author: {
       name: `Félix Oporto`,
-      summary: `I write turorials to help begginer programmers learn the necessary skills to become frontend developers.`,
+      summary: `I write turorials to help beginner programmers learn the necessary skills to become frontend developers.`,
     },
     description: ``,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,

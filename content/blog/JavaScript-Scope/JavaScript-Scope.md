@@ -19,7 +19,7 @@ on where these are located in the code, and by the way, these rules in JavaScrip
 
 ## Scope collection
 
-### 1.Global Scope
+### 1. Global Scope
 
 The Global Scope is the area outside all the functions in your code. There is only one.
 
@@ -34,7 +34,7 @@ function foo() {
 // End global scope ==========
 ```
 
-### 2.Local Scope
+### 2. Local Scope
 
 When variables, functions and objects are declared inside of a function, the area where they are located becomes the **Local Scope**.   
 Every function can have its own Local Scope, and it is possible to declare the same variable name in different local scopes with different

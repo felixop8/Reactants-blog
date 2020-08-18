@@ -9,7 +9,7 @@ tags: [javascript, fundamentals, scope]
 ## What is Scope?
 
 <div style={{ padding: '20px', backgroundColor: '#fbe384', marginBottom: '20px', borderRadius: '5px' }}>
-  Set of rules for storing variables, functions and objects in a particular part of your code and for finding those variables at a later time.
+  Set of rules for storing variables, functions and objects in a particular part of your code and for finding those at a later time.
 </div>
 
 The word **Scope** is also used to indicate areas in your code where variables, functions and objects are defined, you can think of these areas as bubbles containing other bubbles — Scope mental map.

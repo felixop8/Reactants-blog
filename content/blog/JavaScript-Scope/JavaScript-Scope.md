@@ -27,7 +27,7 @@ There are two types of scopes(bubbles) in JavaScript:
 
 The Global Scope is the area outside all the functions in your code. There is only one Global Scope in your JavaScript document.
 
-```javascript
+```jsx
 // global scope
 var vegetable = 'carrot';
 
@@ -43,7 +43,7 @@ When variables, functions and objects are declared inside of a function, the are
 Every function can have its own Local Scope, and it is possible to declare the same variable name in different local scopes with different
 values since each variable is bound to the respective scope and are not mutual visible.
 
-```javascript
+```jsx
 // global scope
 
 function foo1() {
@@ -69,9 +69,9 @@ function foo3() {
 
 ### try/catch
 
-The variable declaration in the catch clause to be block-scoped.
+The variable declaration in the **catch** clause to be block-scoped.
 
-```javascript
+```jsx
 try {
 
      undefined() // illegal operation to force an exception!
@@ -84,8 +84,8 @@ try {
 
 }
 
-console.log(err) // ReferenceError
-console.log(b); // 3
+console.log(err) // ReferenceError: err is not defined
+console.log(b); // 2
 console.log(c); // TypeError: undefined is not a function
 ```
 
@@ -93,17 +93,22 @@ console.log(c); // TypeError: undefined is not a function
 
 These two keywords support the declaration of local scope inside of block statements - `if`, `switch`, `for`, `while`, etc.
 
-```javascript
+```jsx
 // global scope
 {
 
-    let vegetable2 = 'zucchini'; // block scope
-
     const vegetable1 = 'eggplant'; // block scope
+
+    let vegetable2 = 'zucchini'; // block scope
 
     var vegetable3 = 'tomato';  // global scope
    
 }
+
+console.log(vegetable1) // ReferenceError: vegetable1 is not defined.
+console.log(vegetable2) // ReferenceError: vegetable2 is not defined.
+console.log(vegetable3) // tomato
+
 ```
 
 <div style={{ padding: '20px', backgroundColor: '#aad4db', margin: '30px 0 50px 0', borderRadius: '5px' }}>
@@ -116,7 +121,7 @@ These two keywords support the declaration of local scope inside of block statem
 A reason block-scoping is useful (related to closures) is to reclaim memory.
 
 
- ```javascript
+ ```jsx
  function process(data) {
    // do something interesting
 }
@@ -135,7 +140,7 @@ btn.addEventListener ('click', function click(evt) {
 
  The click handler callback doesn’t need the someReallyBigData variable at all. That means, after process(...) runs, the big memory-heavy data structure could be garbage collected. However, it’s quite likely that the JS engine will still have to keep the structure around, since the click function has a closure over the entire scope.
 
-Block-scopin can address this concern, making it clearer to the engine that it doesn’t need to keep someReallyBidData around.
+Block-scoping can address this concern, making it clearer to the engine that it doesn’t need to keep someReallyBidData around.
 
 
 ---
@@ -154,7 +159,7 @@ Let's examine these rules:
     Children scopes can access variables, functions and objects defined in their parent scope collection.
 </div>
 
-```javascript
+```jsx
 // parent scope (global scope)
 
 var a = 'Hello World';
@@ -170,7 +175,7 @@ foo() // output: Hello World
 
 A slightly more complex example:
 
-```javascript
+```jsx
 // Global Scope
 
 function foo() {
@@ -202,7 +207,7 @@ foo() // output: Hello World
     Parent scopes <strong>CANNOT</strong> access variables, functions and objects defined in their children scope collection.
 </div>
 
-```javascript
+```jsx
 // global scope
 
 function foo() {
